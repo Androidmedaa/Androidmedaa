@@ -8,6 +8,61 @@
 
 👋Bye
 
+<!-- HTML Kısmı -->
+<div class="container">
+  <div class="butterfly">
+    <div class="wing left"></div>
+    <div class="wing right"></div>
+  </div>
+</div>
+
+<!-- CSS Kısmı -->
+<style>
+.container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.butterfly {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -50%);
+  animation: fly 5s infinite;
+}
+
+.wing {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: pink;
+  border-radius: 50%;
+}
+
+.wing.left {
+  transform: rotate(-45deg);
+  left: -50px;
+}
+
+.wing.right {
+  transform: rotate(45deg);
+  right: -50px;
+}
+
+@keyframes fly {
+  0%, 100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50%, -60%) rotate(20deg);
+  }
+}
+</style>
+
+
 
 
 
